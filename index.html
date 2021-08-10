@@ -1,50 +1,68 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- The !DOCTYPE marker indicates it's a HTML5 file -->
 <html lang="en">
-    <head>
+    <head> <!-- Not visible on the page, sets up files for our HTML, such as our CSS -->
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Static Website</title>
-        <!-- Font Awesome Icons (Free version) -->
-        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> <!-- This allows the site to dynamically change size according to screen dimensions. -->
+        <title>Static Website</title> <!-- This is the text on the tab-bar -->
+        
         <!-- Bootstrap 5.0.2 CSS-->
+        <!-- Bootstrap5 CSS. You can go to their website (https://getbootstrap.com/docs/5.1/getting-started/introduction/) to look up how to use their CSS files.-->
         <link href="bootstrap-5.0.2-dist\css\bootstrap.css" rel="stylesheet" />
+        
         <!-- Bootstrap 5.0.2 JS -->
+        <!-- Bootstrap5 JS. We don't make too much use of JS in this project, but it's there if you would like to learn more. -->
         <script src="bootstrap-5.0.2-dist\js\bootstrap.js"></script>
+        
     </head>
-    <body id="page-top">
-        <!-- Padding Section -->
-        <div class="py-2"></div>
-
-        <!-- Main Section -->
+    <body id="page-top"> <!-- Our content, everything visible on the HTML page -->
+        
+        <!-- This is a divider or "div". We use these tags to organize content. We use the "container" rule from our CSS to group the content on our page -->
+        <!-- It's also common to nest elements inside other elements. They will inherit the styling rules of their parents, unless overidden -->
         <div class="container">
-            <h1 class="pb-2">Webpage Title</h1>
+            
+            <!-- "h1" is a header tag, "py-2" rule is bootstrap's way of adding padding to content: p for padding, y for y-axis, 2 for scale -->
+            <h1 class="py-2">Webpage Title</h1> 
+            
+            <!-- We use the "p" tag for writing and organizing text.-->
             <p>Here's some example text. You can write more within these "p" tags. If you want to test with sample text, then you can use Lorem Ipsum: </p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-            <div class="container d-flex flex-column py-3">
+            <!-- The "d-flex" and "flex-column" rules are Bootstrap's way of dynamically reorganizing content based on screen size -->
+            <div class="container d-flex flex-column py-4">
+                <!-- The "row" rule treates the <div> as a new row in its flex container. You could add more rows -->
                 <div class="row align-items-center">
+                    
+                    <!-- The "col-" rules determine how much of each row an element can take. On a scale from 1-12. -->
                     <div class="col-lg-6 col-md-8 mx-auto">
-                        <img class="img-fluid pb-2" src="assets/img/placeholder-image.png" alt="Image Broken">
+                        <!-- The "img" tag allows for images to be place in HTML. You need a "src" path that leads to an image, and an "alt" which appears if the image cannot be displayed. -->
+                        <!-- "img-fluid" allows images to be resized in conatiners -->
+                        <img class="img-fluid" src="assets/img/placeholder-image.png" alt="Image Broken">
                     </div>
+
                     <div class="col-lg-6 col-md-8 mx-auto">
                         <p>HTML gives us great control over how our structure looks, while CSS gives us control over what our content ends up looking like on the browser. JS can add functionality, although it isn't used on this webpage.</p>
+                        <!-- The "a" tag is a link tag, and allows us to add links to our webpages. You need a destination path "href"-->
                         <a href="page.html">We can also include links to other pages, to expand our website.</a>
                     </div>
+
                 </div>
             </div>
+
         </div>
 
         <!-- Footer Copyright Section-->
+        <!-- This is a footer we're placing at the end of our HTML. "bg-primary" is the background color (blue, in this case) -->
         <div class="bg-primary py-4 text-center text-white">
-            <div class="container">
-                <small>Copyright © Your Name 2021</small>
-            </div>
+            <small>Copyright © Your Name 2021</small>
         </div>
 
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <!-- We can place JS after our markup if we want to print the site first, then add the interactivity
+             It plays a much larger role in larger, more complicated websites, where speed is a major issue.
+             Here, there is no js file: HTML won't crash if a file is missing, so you need to be very careful
+             when working with front-end technologies.
+             -->
+        <script src="scripts.js"></script>
     </body>
 </html>
